@@ -9,14 +9,22 @@ namespace KanbanWSB.Models.Identity
 {
     public class AppUser : IdentityUser
     {
+        public AppUser() : base()
+        {
 
+        }
+            
     }
-
     public class AppDbContext : IdentityDbContext<AppUser>
     {
         public AppDbContext() : base("KanbanWsbConnString")
         {
 
+        }
+
+        public static AppDbContext Create()
+        {
+            return new AppDbContext();
         }
     }
 }

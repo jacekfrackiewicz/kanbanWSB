@@ -13,6 +13,7 @@ namespace KanbanWSB
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            
         }
     }
 }

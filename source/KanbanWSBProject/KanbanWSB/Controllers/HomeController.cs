@@ -12,9 +12,9 @@ namespace KanbanWSB.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        public ActionResult Main()
+        public ActionResult Home()
         {
-            return View();
+            return View("Home");
         }
 
         public void CreateTestUser()
