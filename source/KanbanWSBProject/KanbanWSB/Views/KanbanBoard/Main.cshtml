@@ -1,13 +1,25 @@
-﻿
+﻿@model KanbanWSB.Models.Boards.BoardViewModel
 @{
     ViewBag.Title = "Kanban Board";
 }
 
 
 <div class="row">
-    <div class="col-lg-12 text-center">
-        <h1>Your Board</h1>
-
+    <div class="col-lg-12 text-center ">
+        <h1>Your Boards</h1>
+       
+        @foreach(var board in @Model.Boards)
+        {
+            <div class="row">
+                <span>Name: @board.Name</span> 
+                <span>Columns: </span> 
+                @foreach (var col in board.Columns)
+                {
+                    <span>@col.Name</span>
+                }
+                
+            </div>
+        }
 
     </div>
 </div>

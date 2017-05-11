@@ -28,6 +28,7 @@
                 @if (Request.IsAuthenticated)
                 {
                     @Html.ActionLink("Kanban Board", "Main", "KanbanBoard", new { area = "" }, new { @class = "navbar-brand" })
+                   
                 }
                 else
                 {
@@ -46,7 +47,10 @@
                         {
                             @Html.AntiForgeryToken()
                         }
-
+                        <li>
+                           
+                            <a href="/KanbanBoard/CreateBoard"><span class="glyphicon glyphicon-plus"></span>Create Board</a>
+                        </li>
                         <li>
                             <a href="javascript:document.getElementById('logoutForm').submit()">
                                 <span class="glyphicon glyphicon-log-out"></span>Log Out

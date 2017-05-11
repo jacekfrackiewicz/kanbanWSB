@@ -10,7 +10,7 @@
             var post = $.ajax({
                 type: "POST",
                 url: document.location.origin + '/User/SubmitCredentials',
-                data: { Email: email, Password: pass },
+                data: { Email: email, Password: pass }
             });
 
             post.done(function () {
@@ -18,7 +18,7 @@
             });
             post.fail(function () {
                 $('#error-login-alert').modal();
-            })
+            });
            
         }
         
